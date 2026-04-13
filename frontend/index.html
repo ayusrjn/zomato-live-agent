@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zomato Live Support</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container glass-panel">
+        <header class="app-header">
+            <div class="logo-container">
+                <div class="circle pulse"></div>
+                <h1>Zomato Live Support</h1>
+            </div>
+            <div class="user-profile" id="userProfile">
+                <span class="user-greeting">Loading...</span>
+            </div>
+        </header>
+
+        <main class="content-area">
+            <section class="active-order-section">
+                <h2>Active Order</h2>
+                <div id="activeOrderCard" class="card order-card shimmer">
+                    <!-- Shimmer loading state -->
+                    <div style="height: 20px; width: 60%; background: #333; margin-bottom: 10px; border-radius: 4px;"></div>
+                    <div style="height: 15px; width: 40%; background: #333; border-radius: 4px;"></div>
+                </div>
+            </section>
+
+            <section class="support-actions">
+                <h2>Support Actions</h2>
+                <div class="action-buttons">
+                    <button id="btnVoiceAgent" class="btn primary-btn pulse-glow">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg>
+                        Call Voice Agent
+                    </button>
+                    <button id="btnRequestRefund" class="btn secondary-btn">
+                        Force Request Refund
+                    </button>
+                </div>
+            </section>
+
+            <section class="order-history-section">
+                <h2>Past Orders</h2>
+                <div id="orderHistoryList" class="order-list">
+                    <!-- Orders will be dynamically injected here -->
+                </div>
+            </section>
+        </main>
+
+        <div id="notificationToast" class="toast hidden">
+            <span id="toastMessage">Notification</span>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>

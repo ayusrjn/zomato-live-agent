@@ -1,0 +1,5 @@
+fastapi
+uvicorn[standard]
+google-genai==1.72.0
+websockets
+httpx
